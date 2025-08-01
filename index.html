@@ -13,36 +13,36 @@
     <div class="container">
         <div class="calculator">
             <div class="runningTotalScreen"></div>
-            <div class="mainScreen"></div>
+            <div class="mainScreen">0</div>
             <div class="calculatorButtons"></div>
             <div class="row">
-                <div class="button clear" id="clearButton">AC</div>
-                <div class="button delete" id="deleteButton">DEL</div>
-                <div class="button" id="latestValue">ANS</div>
-                <div class="button arithmetic" id="divideButton">÷</div>
+                <div class="button clear">AC</div>
+                <div class="button delete">DEL</div>
+                <div class="button arithmetic percent" data-operator="%">%</div>
+                <div class="button arithmetic" data-operator="/">÷</div>
             </div>
             <div class="row">
-                <div class="button number" id="number7">7</div>
-                <div class="button number" id="number8">8</div>
-                <div class="button number" id="number9">9</div>
-                <div class="button arithmetic" id="multiplyButton">×</div>
+                <div class="button number" data-value="7">7</div>
+                <div class="button number" data-value="8">8</div>
+                <div class="button number" data-value="9">9</div>
+                <div class="button arithmetic" data-operator="*">×</div>
             </div>
             <div class="row">
-                <div class="button number" id="number4">4</div>
-                <div class="button number" id="number5">5</div>
-                <div class="button number" id="number6">6</div>
-                <div class="button arithmetic" id="subtractButton">-</div>
+                <div class="button number" data-value="4">4</div>
+                <div class="button number" data-value="5">5</div>
+                <div class="button number" data-value="6">6</div>
+                <div class="button arithmetic" data-operator="-">-</div>
             </div>
             <div class="row">
-                <div class="button number" id="number1">1</div>
-                <div class="button number" id="number2">2</div>
-                <div class="button number" id="number3">3</div>
-                <div class="button arithmetic" id="addButton">+</div>
+                <div class="button number" data-value="1">1</div>
+                <div class="button number" data-value="2">2</div>
+                <div class="button number" data-value="3">3</div>
+                <div class="button arithmetic" data-operator="+">+</div>
             </div>
             <div class="row">
-                <div class="button number" id="number0">0</div>
-                <div class="button decimal" id="decimalButton">.</div>
-                <div class="button" id="equalsButton">=</div>
+                <div class="button number" data-value="0">0</div>
+                <div class="button decimal">.</div>
+                <div class="button equals">=</div>
             </div>
         </div>
     </div>
