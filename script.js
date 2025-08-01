@@ -87,9 +87,9 @@ buttons.forEach((button) => {
 
         if (isResultDisplayed) {
             shouldClearDisplay = true;
-            mainScreen.textContent = "";
-            runningTotalScreen.textContent = "";
-            num1 = [];
+            mainScreen.textContent = calculationResult;
+            runningTotalScreen.textContent = calculationResult;
+            num1 = [calculationResult];
             num2 = [];
             operator = undefined;
             isResultDisplayed = false;
@@ -110,7 +110,7 @@ buttons.forEach((button) => {
                 canPush = !currentNumArray.includes(".");
             }
             if (canPush) {
-                if (mainScreen.textContent === "0" && button.textContent !== ".") {
+                if (mainScreen.textContent == "0" && button.textContent !== ".") {
                     shouldClearDisplay = true;
                 }
                 if (shouldClearDisplay) {
@@ -237,7 +237,8 @@ percentButton.addEventListener("click", () => {
 equalsButton.addEventListener("click", () => {
     if (num1.length == 0) {
         return;
-
+    } else if ((num1.length !==0) && (num2.length == 0)) {
+        mainScreen.textContent = calculationResult;
     } else if ((operator == undefined) && (num2.length == 0)) {
         const tempVar1 = num1.join("");
         const tempVar2 = parseFloat(tempVar1);
@@ -263,6 +264,7 @@ equalsButton.addEventListener("click", () => {
             mainScreen.append(calculationResult.toExponential(6));
             runningTotalScreen.textContent = "";
             runningTotalScreen.append(calculationResult.toExponential(6));
+            isResultDisplayed = true;
 
         } else {
             mainScreen.append(calculationResult);
@@ -271,7 +273,7 @@ equalsButton.addEventListener("click", () => {
             num1 = [calculationResult];
             operator = undefined;
             num2 = [];
-            isResultDisplayed = false;
+            isResultDisplayed = true;
         }
     }
 })
